@@ -11,7 +11,9 @@ interface ProtectedPageProps {
 export default function ProtectedPage({ children }: ProtectedPageProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const { isAuthenticated, initialized } = useAppSelector((state) => state.auth);
+  const { isAuthenticated, initialized } = useAppSelector(
+    (state) => state.auth
+  );
 
   useEffect(() => {
     if (!initialized) return;
