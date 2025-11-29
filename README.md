@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eagle3d Products – Frontend
 
-## Getting Started
+Frontend for a realtime product management dashboard built with Next.js, TypeScript, Redux Toolkit, RTK Query, Shadcn UI, and Firebase Firestore.
 
-First, run the development server:
+The UI updates instantly when Firestore data changes, without manual refresh or polling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js (App Router)**
+- **TypeScript**
+- **Redux Toolkit + RTK Query**
+- **Shadcn UI**
+- **TanStack React Table**
+- **React Hook Form**
+- **Firebase Firestore (client SDK for realtime updates)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Authentication
+- Login via backend `/auth/login`
+- JWT stored in HTTP-only cookie
+- Protected routes for Products and Analytics pages
 
-## Learn More
+# Product Management
+- Realtime product table sourced directly from Firestore (`onSnapshot`)
+- CRUD operations through backend
+- Handled forms with React Hook Form
+- Status selector with Shadcn Select
+- Reusable confirmation dialogs
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Analytics
+- Charts built with `recharts`
+- Metrics:
+  - Products by status
+  - Products by category
+  - Products per month
