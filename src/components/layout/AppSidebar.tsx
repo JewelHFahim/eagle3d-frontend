@@ -85,7 +85,7 @@ const AppSidebar = () => {
             <span className="mx-3">Products</span>
           </Link>
 
-          <Link href="/analytics" className={navItemClass("/analytics")}>
+          <Link href="/" className={navItemClass("/")}>
             <svg
               className="w-5 h-5"
               viewBox="0 0 24 24"

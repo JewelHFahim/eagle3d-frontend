@@ -11,10 +11,7 @@ export default async function LoginPage({
 }) {
   const params = await searchParams;
 
-  const redirect =
-    typeof params?.redirect === "string" && params.redirect.length > 0
-      ? params.redirect
-      : "/products";
+  const redirect = typeof params?.redirect === "string" && params.redirect.length > 0 ? params.redirect : "/products";
 
   return <LoginPageClient redirect={redirect} />;
 }

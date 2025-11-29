@@ -37,7 +37,7 @@ export default function LoginPageClient({ redirect }: { redirect: string }) {
 
   useEffect(() => {
     if (isAuthenticated || isSuccess) {
-      router.replace(redirect || "/products");
+      router.replace(redirect || "/");
     }
   }, [isAuthenticated, isSuccess, redirect, router]);
 
