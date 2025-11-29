@@ -4,12 +4,17 @@ export const metadata = {
   title: "Login | Realtime Products",
 };
 
-export default function LoginPage({
+export default async function LoginPage({
   searchParams,
 }: {
-  searchParams?: { redirect?: string };
+  searchParams: Promise<{ redirect?: string }>;
 }) {
-  const redirect = typeof searchParams?.redirect === "string" ? searchParams.redirect : "/products";
+  const params = await searchParams;
+
+  const redirect =
+    typeof params?.redirect === "string" && params.redirect.length > 0
+      ? params.redirect
+      : "/products";
 
   return <LoginPageClient redirect={redirect} />;
 }
